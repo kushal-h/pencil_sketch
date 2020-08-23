@@ -1,4 +1,3 @@
-
 import streamlit as st
 import numpy as np
 from PIL import Image
@@ -21,7 +20,7 @@ st.write("This Web App is to help convert your photos to realistic Pencil Sketch
 file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
 
 if file_image is None:
-    #st.set_option('deprecation.showfileUploaderEncoding', False)
+    st.set_option('deprecation.showfileUploaderEncoding', False)
     st.write("You haven't uploaded any image file")
 
 else:
