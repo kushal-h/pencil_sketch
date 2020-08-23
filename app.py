@@ -3,6 +3,9 @@ import numpy as np
 from PIL import Image
 import cv2
 
+
+st.set_option('deprecation.showfileUploaderEncoding', False)
+showfileUploaderEncoding = False
 def dodgeV2(x, y):
     return cv2.divide(x, 255 - y, scale=256)
 
@@ -18,7 +21,7 @@ st.title("PencilSketcher App")
 st.write("This Web App is to help convert your photos to realistic Pencil Sketches")
 
 file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 if file_image is None:
     
     st.write("You haven't uploaded any image file")
