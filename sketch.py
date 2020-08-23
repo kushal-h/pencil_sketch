@@ -18,9 +18,9 @@ st.title("PencilSketcher App")
 st.write("This Web App is to help convert your photos to realistic Pencil Sketches")
 
 file_image = st.sidebar.file_uploader("Upload your Photos", type=['jpeg','jpg','png'])
-
+st.set_option('deprecation.showfileUploaderEncoding', False)
 if file_image is None:
-    st.set_option('deprecation.showfileUploaderEncoding', False)
+    
     st.write("You haven't uploaded any image file")
 
 else:
